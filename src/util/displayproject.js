@@ -1,8 +1,13 @@
+import { project } from "./project";
+
 const projectdiv = document.querySelector(".project");
 
 const tododiv = document.createElement("div");
+tododiv.classList.add("todo");
 const doingdiv = document.createElement("div");
+doingdiv.classList.add("doing");
 const donediv = document.createElement("div");
+donediv.classList.add("done");
 
 export function displayProject(project) {
   clearScreen();
@@ -33,22 +38,24 @@ function clearScreen() {
 }
 
 function displayTask(taskList, parentdiv) {
-  taskList.forEach((task) => {
-    const taskdiv = document.createElement("div");
-    taskdiv.classList.add("task");
+  if (taskList != null) {
+    taskList.forEach((task) => {
+      const taskdiv = document.createElement("div");
+      taskdiv.classList.add("task");
 
-    const title = document.createElement("h3");
-    title.innerText = task.title;
+      const title = document.createElement("h3");
+      title.innerText = task.title;
 
-    const description = document.createElement("p");
-    description.innerText = task.description;
+      const description = document.createElement("p");
+      description.innerText = task.description;
 
-    const dueDate = document.createElement("p");
-    dueDate.innerText = task.dueDate;
+      const dueDate = document.createElement("p");
+      dueDate.innerText = task.dueDate;
 
-    taskdiv.appendChild(title);
-    taskdiv.appendChild(description);
-    taskdiv.appendChild(dueDate);
-    parentdiv.appendChild(taskdiv);
-  });
+      taskdiv.appendChild(title);
+      taskdiv.appendChild(description);
+      taskdiv.appendChild(dueDate);
+      parentdiv.appendChild(taskdiv);
+    });
+  }
 }

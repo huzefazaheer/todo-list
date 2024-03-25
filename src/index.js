@@ -2,6 +2,10 @@ const { displayProject } = require("./util/displayproject");
 const { project } = require("./util/project");
 const { task } = require("./util/tasks");
 
+const projectdiv = document.querySelector(".project");
+const tododiv = document.createElement("div");
+const doingdiv = document.createElement("div");
+const donediv = document.createElement("div");
 const btnaddtask = document.getElementById("btnaddtask");
 
 tasks = [
@@ -26,3 +30,18 @@ function addTask() {
 btnaddtask.addEventListener("click", (e) => {
   addTask();
 });
+
+function addListeners() {
+  projectdiv.childNodes.forEach((tasklist) => {
+    tasklist.childNodes.forEach((taskitem, index) => {
+      taskitem.addEventListener("click", (e) => {
+        console.log(tasklist.classList);
+        home.incrementTask(tasklist.classList, index);
+        displayProject(home);
+        addListeners();
+      });
+    });
+  });
+}
+
+addListeners();

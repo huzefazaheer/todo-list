@@ -4,8 +4,14 @@ body {
 }
 
 .project {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 5vw;
+}
+
+.project > * {
+  padding: 0 5vw;
 }
 
 .task {
