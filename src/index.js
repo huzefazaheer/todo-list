@@ -20,8 +20,20 @@ home = new project("Home", tasks);
 displayProject(home);
 
 function addTask() {
-  title = prompt("Enter title name");
-  description = prompt("Enter description");
+  let isDone = false;
+  while (isDone == false) {
+    title = prompt("Enter title name");
+    if (title != "") {
+      isDone = true;
+    }
+  }
+  isDone = false;
+  while (isDone == false) {
+    description = prompt("Enter description");
+    if (description != "") {
+      isDone = true;
+    }
+  }
 
   home.addTask(new task(title, description, "Today"));
   displayProject(home);
