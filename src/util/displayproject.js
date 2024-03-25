@@ -1,7 +1,10 @@
 const projectdiv = document.querySelector(".project");
 
 export function displayProject(project) {
-  let taskList = project.getTasks();
+  displayTask(project.taskList.Todo);
+}
+
+function displayTask(taskList) {
   taskList.forEach((task) => {
     const title = document.createElement("h3");
     title.innerText = task.title;
