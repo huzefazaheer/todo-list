@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 body {
   margin: 0;
   padding: 0;
+  background-color: whitesmoke;
+  font-family: "Inter", sans-serif;
 }
 
 .project {
@@ -8,6 +12,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   column-gap: 5vw;
+  height: 80vh;
 }
 
 .project > * {
@@ -15,5 +20,30 @@ body {
 }
 
 .task {
-  background-color: aliceblue;
+  background-color: white;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.1rem 1.5rem;
+  margin-top: 2vh;
+  border-radius: 12px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: white;
+  border: solid black 1px;
+}
+
+button:active {
+  background-color: whitesmoke;
+  border: solid black 2px;
 }
