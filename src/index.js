@@ -29,6 +29,7 @@ function addTask() {
 
 btnaddtask.addEventListener("click", (e) => {
   addTask();
+  addListeners();
 });
 
 function addListeners() {
