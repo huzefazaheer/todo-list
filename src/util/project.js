@@ -3,8 +3,8 @@ export class project {
     this.title = title;
     this.taskList = {
       Todo: taskList,
-      Doing: taskList,
-      Done: taskList,
+      Doing: null,
+      Done: null,
     };
   }
 

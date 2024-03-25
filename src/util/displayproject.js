@@ -1,26 +1,35 @@
 const projectdiv = document.querySelector(".project");
 
+const tododiv = document.createElement("div");
+const doingdiv = document.createElement("div");
+const donediv = document.createElement("div");
+
 export function displayProject(project) {
-  const tododiv = document.createElement("div");
+  clearScreen();
+
   const headingTodo = document.createElement("h3");
   headingTodo.innerText = "To Do";
   tododiv.appendChild(headingTodo);
   projectdiv.appendChild(tododiv);
   displayTask(project.taskList.Todo, tododiv);
 
-  const doingdiv = document.createElement("div");
   const headingDoing = document.createElement("h3");
   headingDoing.innerText = "Doing";
   doingdiv.appendChild(headingDoing);
   projectdiv.appendChild(doingdiv);
   displayTask(project.taskList.Doing, doingdiv);
 
-  const donediv = document.createElement("div");
   const headingDone = document.createElement("h3");
   headingDone.innerText = "Done";
   donediv.appendChild(headingDone);
   projectdiv.appendChild(donediv);
   displayTask(project.taskList.Done, donediv);
+}
+
+function clearScreen() {
+  tododiv.innerHTML = "";
+  doingdiv.innerHTML = "";
+  donediv.innerHTML = "";
 }
 
 function displayTask(taskList, parentdiv) {
