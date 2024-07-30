@@ -16,7 +16,7 @@ export class project {
     return this.taskList;
   }
 
-  //TODO: Make dom part seperate to game logic
+
   incrementTask(classlist, index) {
     if (classlist.contains("todo")) {
       this.taskList.Doing.push(this.taskList.Todo[index - 1]);
@@ -25,7 +25,6 @@ export class project {
       this.taskList.Done.push(this.taskList.Doing[index - 1]);
       this.taskList.Doing.splice(index - 1, 1);
     } else {
-      this.taskList.Todo.push(this.taskList.Done[index - 1]);
       this.taskList.Done.splice(index - 1, 1);
     }
   }

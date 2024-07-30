@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Tasks</h1>
-    <div class="project"></div>
-    <div class="btn-wrapper"><button id="btnaddtask">Add task</button></div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do List</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<a class="hamburger"
+			><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g
+					id="SVGRepo_tracerCarrier"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				></g>
+				<g id="SVGRepo_iconCarrier">
+					<path
+						d="M4 18H10"
+						stroke="#000000"
+						stroke-width="2"
+						stroke-linecap="round"
+					></path>
+					<path
+						d="M4 12L16 12"
+						stroke="#000000"
+						stroke-width="2"
+						stroke-linecap="round"
+					></path>
+					<path
+						d="M4 6L20 6"
+						stroke="#000000"
+						stroke-width="2"
+						stroke-linecap="round"
+					></path>
+				</g></svg
+		></a>
+
+		<div class="left inactive">
+			<div class="menuleft">
+				<div class="projects">
+					<h1>All projects</h1>
+					<ul id="projectlist">
+						<li>Home</li>
+					</ul>
+				</div>
+				<div class="btn-wrapper">
+					<button id="btnaddproject">Add project</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="right">
+			<h1>Tasks</h1>
+			<div class="project"></div>
+			<div class="btn-wrapper"><button id="btnaddtask">Add task</button></div>
+		</div>
+	</body>
 </html>
