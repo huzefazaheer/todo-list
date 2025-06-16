@@ -6,4 +6,4 @@ It uses **OOP principles** to allow users to **add, remove, and maneuver tasks**
 
 -----
 
-### [Live Demo](https://huzefazaheer.github.io/todo-list)
+### [Live Demo](https://huzefazaheer.github.io/todo-list/dist)
